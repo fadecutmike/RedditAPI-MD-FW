@@ -25,6 +25,10 @@
 		2D89B64D227758B20061E6F5 /* RedditPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B64B227758B20061E6F5 /* RedditPostTableViewCell.swift */; };
 		2D89B64E227758B20061E6F5 /* RedditPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D89B64C227758B20061E6F5 /* RedditPostTableViewCell.xib */; };
 		2D89B650227764B90061E6F5 /* SubRedditInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B64F227764B90061E6F5 /* SubRedditInfo.swift */; };
+		2D89B656227765780061E6F5 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B652227765780061E6F5 /* UIImageViewExtension.swift */; };
+		2D89B657227765780061E6F5 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B653227765780061E6F5 /* IntExtension.swift */; };
+		2D89B658227765780061E6F5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B654227765780061E6F5 /* ImageDownloader.swift */; };
+		2D89B659227765780061E6F5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B655227765780061E6F5 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +52,10 @@
 		2D89B64B227758B20061E6F5 /* RedditPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditPostTableViewCell.swift; sourceTree = "<group>"; };
 		2D89B64C227758B20061E6F5 /* RedditPostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedditPostTableViewCell.xib; sourceTree = "<group>"; };
 		2D89B64F227764B90061E6F5 /* SubRedditInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubRedditInfo.swift; sourceTree = "<group>"; };
+		2D89B652227765780061E6F5 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		2D89B653227765780061E6F5 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		2D89B654227765780061E6F5 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		2D89B655227765780061E6F5 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,7 @@
 				2D89B61E2277283E0061E6F5 /* Application */,
 				2D89B6482277561E0061E6F5 /* View */,
 				2D89B647227756110061E6F5 /* ViewController */,
+				2D89B651227765780061E6F5 /* Helpers */,
 				2D89B63A227730F00061E6F5 /* Model */,
 				2D89B61F227728AA0061E6F5 /* Networking */,
 			);
@@ -175,6 +184,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2D89B651227765780061E6F5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2D89B652227765780061E6F5 /* UIImageViewExtension.swift */,
+				2D89B653227765780061E6F5 /* IntExtension.swift */,
+				2D89B654227765780061E6F5 /* ImageDownloader.swift */,
+				2D89B655227765780061E6F5 /* DateExtension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -252,11 +272,15 @@
 				2D89B635227728AA0061E6F5 /* Router.swift in Sources */,
 				2D89B630227728AA0061E6F5 /* JSONParameterEncoder.swift in Sources */,
 				2D89B62F227728AA0061E6F5 /* URLParameterEncoding.swift in Sources */,
+				2D89B657227765780061E6F5 /* IntExtension.swift in Sources */,
+				2D89B656227765780061E6F5 /* UIImageViewExtension.swift in Sources */,
 				2D89B633227728AA0061E6F5 /* HTTPTask.swift in Sources */,
 				2D89B650227764B90061E6F5 /* SubRedditInfo.swift in Sources */,
 				2D89B63922772FB80061E6F5 /* NetworkManager.swift in Sources */,
+				2D89B658227765780061E6F5 /* ImageDownloader.swift in Sources */,
 				2D89B63822772F880061E6F5 /* RedditPostEndPoint.swift in Sources */,
 				2D89B634227728AA0061E6F5 /* HTTPMethod.swift in Sources */,
+				2D89B659227765780061E6F5 /* DateExtension.swift in Sources */,
 				2D89B62E227728AA0061E6F5 /* ParameterEncoding.swift in Sources */,
 				2D89B637227728AA0061E6F5 /* EndPointType.swift in Sources */,
 				2D89B63E227730F00061E6F5 /* RedditPost.swift in Sources */,

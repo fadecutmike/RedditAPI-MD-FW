@@ -51,12 +51,12 @@ class RedditPostTableViewCell: UITableViewCell {
     func loadPost(data: RedditPost) {
         self.titleTextView.text = data.title
         self.subredditNameLabel.text = "r/\(data.subreddit ?? "")"
-        
-        // TODO: Process date posted string. Setup number formatter for comment count to read '1.1k' etc.
-        
+        self.commentCountLabel.text = data.commentCount.formatUsingAbbrevation()
+        self.postedDateLabel.text = data.dateCreated.timeAgoPosted()
         self.authorLabel.text = "u/\(data.author)"
         
-        // TODO: Download and set thumbnail and subreddit icon images
+        if let icon = data.srDetail?.icon { subredditIconImageView.loadFrom(url: icon, animated: true) }
+        if let thumb = data.thumbnail { thumbnailImageView.loadFrom(url: thumb, animated: true) }
         
         self.layoutIfNeeded()
     }
