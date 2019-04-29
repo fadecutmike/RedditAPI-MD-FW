@@ -21,6 +21,7 @@
 		2D89B637227728AA0061E6F5 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B62D227728AA0061E6F5 /* EndPointType.swift */; };
 		2D89B63822772F880061E6F5 /* RedditPostEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B627227728AA0061E6F5 /* RedditPostEndPoint.swift */; };
 		2D89B63922772FB80061E6F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B625227728AA0061E6F5 /* NetworkManager.swift */; };
+		2D89B63E227730F00061E6F5 /* RedditPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B63C227730F00061E6F5 /* RedditPost.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		2D89B62A227728AA0061E6F5 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		2D89B62B227728AA0061E6F5 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		2D89B62D227728AA0061E6F5 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		2D89B63C227730F00061E6F5 /* RedditPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditPost.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				2D89B61E2277283E0061E6F5 /* Application */,
+				2D89B63A227730F00061E6F5 /* Model */,
 				2D89B61F227728AA0061E6F5 /* Networking */,
 			);
 			path = mdimore;
@@ -137,6 +140,14 @@
 				2D89B62D227728AA0061E6F5 /* EndPointType.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		2D89B63A227730F00061E6F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D89B63C227730F00061E6F5 /* RedditPost.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +231,7 @@
 				2D89B62E227728AA0061E6F5 /* ParameterEncoding.swift in Sources */,
 				2D89B637227728AA0061E6F5 /* EndPointType.swift in Sources */,
 				2D89B60F227713B40061E6F5 /* ViewController.swift in Sources */,
+				2D89B63E227730F00061E6F5 /* RedditPost.swift in Sources */,
 				2D89B60D227713B40061E6F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,6 +24,38 @@ enum Result<String> {
 
 struct NetworkManager {
     let router = Router<RedditApi>()
+    func getRedditPosts(completion: @escaping (_ posts: [RedditPost]?,_ error: String?)->()) {
+        router.request(.redditTop) { data, response, error in
+            guard error == nil else {
+                completion(nil, error.debugDescription)
+                return
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(response)
+                switch result {
+                case .success:
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    
+                    do {
+                        let apiResponse = try JSONDecoder().decode(RootRedditPostJSONData.self, from: responseData)
+                        if let topData = apiResponse.data {
+                            let posts = topData.children?.map({$0.data})
+                            completion(posts, nil)
+                        }
+                    } catch {
+                        print("NetworkManager, error: \(error)")
+                        completion(nil, NetworkResponse.decodeFailed.rawValue)
+                    }
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+        }
+    }
     
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
         switch response.statusCode {
