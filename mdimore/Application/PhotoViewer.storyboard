@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IHQ-bY-rsh">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo View Controller-->
+        <scene sceneID="VUg-VV-j0e">
+            <objects>
+                <viewController storyboardIdentifier="PhotoViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IHQ-bY-rsh" customClass="PhotoViewController" customModule="mdimore_FleetWit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Vr-Wd-Ej9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8QD-EK-yJR">
+                                <rect key="frame" x="0.0" y="102" width="414" height="760"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2H-xS-Kgu">
+                                <rect key="frame" x="344" y="58" width="50" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="0XU-np-qt4"/>
+                                    <constraint firstAttribute="height" constant="32" id="QAj-B1-XfM"/>
+                                    <constraint firstAttribute="width" constant="50" id="Z7Q-0v-c8F"/>
+                                    <constraint firstAttribute="height" constant="32" id="eE4-4R-vAa"/>
+                                </constraints>
+                                <state key="normal" image="save"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0XU-np-qt4"/>
+                                        <exclude reference="QAj-B1-XfM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0XU-np-qt4"/>
+                                        <include reference="QAj-B1-XfM"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="saveBtnPressed:" destination="IHQ-bY-rsh" eventType="touchUpInside" id="h74-85-8GQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hj7-Zk-3Pf">
+                                <rect key="frame" x="20" y="62" width="50" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="iJz-YX-sbt"/>
+                                    <constraint firstAttribute="height" constant="32" id="kVB-lX-zDG"/>
+                                    <constraint firstAttribute="width" constant="32" id="qfs-vz-Gtt">
+                                        <variation key="heightClass=compact" constant="50"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="50" id="sEb-hw-Lio"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="x-icon"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kVB-lX-zDG"/>
+                                        <exclude reference="qfs-vz-Gtt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="kVB-lX-zDG"/>
+                                        <include reference="qfs-vz-Gtt"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="closeBtnPressed:" destination="IHQ-bY-rsh" eventType="touchUpInside" id="Laf-A0-0Y4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hj7-Zk-3Pf" firstAttribute="leading" secondItem="9Hl-Tu-Nqy" secondAttribute="leading" constant="20" id="6Dd-WW-mxm"/>
+                            <constraint firstItem="9Hl-Tu-Nqy" firstAttribute="trailing" secondItem="8QD-EK-yJR" secondAttribute="trailing" id="A4A-qq-okr"/>
+                            <constraint firstItem="8QD-EK-yJR" firstAttribute="leading" secondItem="9Hl-Tu-Nqy" secondAttribute="leading" id="CLl-zn-HPg"/>
+                            <constraint firstItem="Y2H-xS-Kgu" firstAttribute="top" secondItem="5Vr-Wd-Ej9" secondAttribute="topMargin" constant="14" id="L7w-Fa-9iA"/>
+                            <constraint firstItem="9Hl-Tu-Nqy" firstAttribute="trailing" secondItem="Y2H-xS-Kgu" secondAttribute="trailing" constant="20" id="N21-6M-Vjh"/>
+                            <constraint firstItem="9Hl-Tu-Nqy" firstAttribute="trailing" secondItem="Y2H-xS-Kgu" secondAttribute="trailing" constant="20" id="S2B-op-EOA"/>
+                            <constraint firstItem="hj7-Zk-3Pf" firstAttribute="leading" secondItem="9Hl-Tu-Nqy" secondAttribute="leading" constant="20" id="YoP-ec-C1B"/>
+                            <constraint firstItem="9Hl-Tu-Nqy" firstAttribute="bottom" secondItem="8QD-EK-yJR" secondAttribute="bottom" id="bQs-AF-8US"/>
+                            <constraint firstItem="Y2H-xS-Kgu" firstAttribute="top" secondItem="9Hl-Tu-Nqy" secondAttribute="top" constant="12" id="eRE-rW-jCE"/>
+                            <constraint firstItem="hj7-Zk-3Pf" firstAttribute="top" secondItem="5Vr-Wd-Ej9" secondAttribute="topMargin" constant="18" id="ogD-UQ-YvP"/>
+                            <constraint firstItem="hj7-Zk-3Pf" firstAttribute="top" secondItem="9Hl-Tu-Nqy" secondAttribute="top" constant="16" id="pgP-Ug-zuy"/>
+                            <constraint firstItem="8QD-EK-yJR" firstAttribute="top" secondItem="hj7-Zk-3Pf" secondAttribute="bottom" constant="8" id="yQo-hM-yI8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9Hl-Tu-Nqy"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="S2B-op-EOA"/>
+                                <exclude reference="6Dd-WW-mxm"/>
+                                <exclude reference="pgP-Ug-zuy"/>
+                                <exclude reference="eRE-rW-jCE"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="S2B-op-EOA"/>
+                                <include reference="6Dd-WW-mxm"/>
+                                <exclude reference="ogD-UQ-YvP"/>
+                                <include reference="pgP-Ug-zuy"/>
+                                <exclude reference="L7w-Fa-9iA"/>
+                                <include reference="eRE-rW-jCE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="closePhotoBtn" destination="hj7-Zk-3Pf" id="Qba-KH-S8N"/>
+                        <outlet property="photoView" destination="8QD-EK-yJR" id="QSv-68-Xkr"/>
+                        <outlet property="savePhotoBtn" destination="Y2H-xS-Kgu" id="BgH-o2-1vl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmy-Tx-yur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1930.4347826086957" y="-1880.3571428571427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="save" width="32" height="32"/>
+        <image name="x-icon" width="22" height="22"/>
+    </resources>
+</document>

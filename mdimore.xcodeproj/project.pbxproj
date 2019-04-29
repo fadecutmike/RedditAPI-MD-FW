@@ -29,6 +29,8 @@
 		2D89B657227765780061E6F5 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B653227765780061E6F5 /* IntExtension.swift */; };
 		2D89B658227765780061E6F5 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B654227765780061E6F5 /* ImageDownloader.swift */; };
 		2D89B659227765780061E6F5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B655227765780061E6F5 /* DateExtension.swift */; };
+		2D89B65B227780A40061E6F5 /* PhotoViewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D89B65A227780A40061E6F5 /* PhotoViewer.storyboard */; };
+		2D89B65D227780B80061E6F5 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B65C227780B80061E6F5 /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		2D89B653227765780061E6F5 /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		2D89B654227765780061E6F5 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		2D89B655227765780061E6F5 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		2D89B65A227780A40061E6F5 /* PhotoViewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PhotoViewer.storyboard; sourceTree = "<group>"; };
+		2D89B65C227780B80061E6F5 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,7 @@
 				2D89B60C227713B40061E6F5 /* AppDelegate.swift */,
 				2D89B641227755DB0061E6F5 /* Assets.xcassets */,
 				2D89B63F227755DB0061E6F5 /* LaunchScreen.storyboard */,
+				2D89B65A227780A40061E6F5 /* PhotoViewer.storyboard */,
 				2D89B640227755DB0061E6F5 /* Main.storyboard */,
 				2D89B618227713B50061E6F5 /* Info.plist */,
 			);
@@ -170,6 +175,7 @@
 		2D89B647227756110061E6F5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				2D89B65C227780B80061E6F5 /* PhotoViewController.swift */,
 				2D89B649227756330061E6F5 /* RedditViewController.swift */,
 			);
 			path = ViewController;
@@ -256,6 +262,7 @@
 				2D89B642227755DC0061E6F5 /* LaunchScreen.storyboard in Resources */,
 				2D89B64E227758B20061E6F5 /* RedditPostTableViewCell.xib in Resources */,
 				2D89B644227755DC0061E6F5 /* Assets.xcassets in Resources */,
+				2D89B65B227780A40061E6F5 /* PhotoViewer.storyboard in Resources */,
 				2D89B643227755DC0061E6F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +291,7 @@
 				2D89B62E227728AA0061E6F5 /* ParameterEncoding.swift in Sources */,
 				2D89B637227728AA0061E6F5 /* EndPointType.swift in Sources */,
 				2D89B63E227730F00061E6F5 /* RedditPost.swift in Sources */,
+				2D89B65D227780B80061E6F5 /* PhotoViewController.swift in Sources */,
 				2D89B60D227713B40061E6F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

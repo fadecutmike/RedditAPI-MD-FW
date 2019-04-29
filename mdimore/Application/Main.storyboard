@@ -68,11 +68,20 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="2oQ-wo-T0V" id="yeb-V7-Lst"/>
+                        <segue destination="S8s-N4-md7" kind="presentation" identifier="openPhotoView" id="wuO-1S-iyR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--PhotoViewer-->
+        <scene sceneID="IEU-od-iem">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oO1-Lq-X3Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="photoViewerSBID" storyboardName="PhotoViewer" id="S8s-N4-md7" sceneMemberID="viewController"/>
+            </objects>
+            <point key="canvasLocation" x="1839.8550724637682" y="87.723214285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cdh-zJ-bj6">

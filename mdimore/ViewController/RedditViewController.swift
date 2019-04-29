@@ -13,6 +13,7 @@ class RedditViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private let refreshControl = UIRefreshControl()
     var redditListingIndex = ListingIndex(before: "", after: "")
     var redditPosts = [RedditPost]()
     var timePeriod: String! {
@@ -27,9 +28,15 @@ class RedditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.register(UINib(nibName: "RedditPostTableViewCell", bundle: nil), forCellReuseIdentifier: "redditPostCell")
-        loadPosts()
+        tableView.register(UINib(nibName: "RedditPostTableViewCell", bundle: nil), forCellReuseIdentifier: "redditPostCell")
+        tableView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshPosts(_:)), for: .valueChanged)
         timePeriod = "day"
+        let vvv = UIView(frame: CGRect(x: 0.0, y: 0.0, width: self.view.frame.width/2.0, height: 30.0))
+        let imgv = UIImageView(image: UIImage(named: "fleetwit-wide"))
+        vvv.addSubview(imgv)
+        navigationItem.titleView = vvv
+        imgv.center = vvv.center        
     }
     
     @objc private func refreshPosts(_ sender: Any) {
@@ -46,6 +53,7 @@ class RedditViewController: UIViewController {
             if let p = posts { self.redditPosts.append(contentsOf: p) }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.refreshControl.endRefreshing()
                 self.navigationController?.setNavigationBarHidden(false, animated: true)
             }
         }
@@ -55,6 +63,17 @@ class RedditViewController: UIViewController {
         if let paths = tableView.indexPathsForVisibleRows {
             tableView.reloadRows(at:paths, with: .automatic)
         }
+    }
+    
+    @IBAction func optionsBtnPressed(_ sender: Any) {
+        let popupDialog = UIAlertController(title: "", message: "Top Posts From", preferredStyle: .actionSheet)
+        popupDialog.addAction(UIAlertAction(title: "Today", style: .default, handler: { (action) in self.timePeriod = "day" }))
+        popupDialog.addAction(UIAlertAction(title: "This Week", style: .default, handler: { (action) in self.timePeriod = "week" }))
+        popupDialog.addAction(UIAlertAction(title: "This Month", style: .default, handler: { (action) in self.timePeriod = "month" }))
+        popupDialog.addAction(UIAlertAction(title: "This Year", style: .default, handler: { (action) in self.timePeriod = "year" }))
+        popupDialog.addAction(UIAlertAction(title: "All", style: .default, handler: { (action) in self.timePeriod = "all" }))
+        popupDialog.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        present(popupDialog, animated: true, completion: nil)
     }
 }
 
@@ -80,6 +99,10 @@ extension RedditViewController: UITableViewDataSource {
         let data = redditPosts[indexPath.row]
         cell.postData = data
         
+        // Closure connecting thumbnail image taps back to controller
+        cell.thumbnailHandler = { [weak self] in
+            self?.openPhotoView(data: data)
+        }
         return cell
     }
     
@@ -100,13 +123,40 @@ extension RedditViewController: UITableViewDataSource {
 extension RedditViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
+        openWebView(data: redditPosts[indexPath.row])
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.contentOffset.y > 200.0 {
-            self.navigationController?.setNavigationBarHidden(true, animated: true)
-        } else if scrollView.contentOffset.y < 0 {
-            self.navigationController?.setNavigationBarHidden(false, animated: true)
+            navigationController?.setNavigationBarHidden(true, animated: true)
+        } else if scrollView.contentOffset.y < 0, !tableView.refreshControl!.isRefreshing {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+    }
+}
+
+
+// MARK: - Segue Items
+extension RedditViewController {
+    
+    func openPhotoView(data:RedditPost) {
+        if data.isImageURL(), let img = data.url {
+            self.performSegue(withIdentifier: "openPhotoView", sender: img)
+        }
+    }
+    
+    func openWebView(data:RedditPost) {
+        if let link = data.pageURL {
+            let svc = SFSafariViewController(url: link)
+            present(svc, animated: true, completion: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "openPhotoView" {
+            let vc = segue.destination as! PhotoViewController
+            vc.photoURL = sender as? String
         }
     }
 }

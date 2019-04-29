@@ -1,6 +1,6 @@
 //
 //  RedditPostTableViewCell.swift
-//  rtest
+//  mdimore
 //
 //  Created by Michael Dimore on 4/28/19.
 //  Copyright © 2019 Michael Dimore. All rights reserved.
@@ -25,6 +25,7 @@ class RedditPostTableViewCell: UITableViewCell {
         thumbnailImageView.layer.cornerRadius = 8.0
         thumbnailImageView.image = UIImage(named: "default-thumb")
         titleTextView.textContainerInset = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
+        setupGestureRecognizer()
         reset()
     }
     
@@ -35,11 +36,23 @@ class RedditPostTableViewCell: UITableViewCell {
     
     private func reset() {
         thumbnailHandler = nil
+        thumbnailImageView.cancelDownload()
         thumbnailImageView.image = nil
         titleTextView.text = nil
         commentCountLabel.text = nil
         authorLabel.text = nil
         postedDateLabel.text = nil
+    }
+    
+    
+    @objc private func thumbnailImagePressed() {
+        thumbnailHandler?()
+    }
+    
+    private func setupGestureRecognizer() {
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(thumbnailImagePressed))
+        thumbnailImageView.isUserInteractionEnabled = true
+        thumbnailImageView.addGestureRecognizer(tapRecognizer)
     }
     
     var postData: RedditPost? {
