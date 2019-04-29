@@ -12,6 +12,15 @@
 		2D89B612227713B40061E6F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D89B610227713B40061E6F5 /* Main.storyboard */; };
 		2D89B614227713B50061E6F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D89B613227713B50061E6F5 /* Assets.xcassets */; };
 		2D89B617227713B50061E6F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D89B615227713B50061E6F5 /* LaunchScreen.storyboard */; };
+		2D89B62E227728AA0061E6F5 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B621227728AA0061E6F5 /* ParameterEncoding.swift */; };
+		2D89B62F227728AA0061E6F5 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B622227728AA0061E6F5 /* URLParameterEncoding.swift */; };
+		2D89B630227728AA0061E6F5 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B623227728AA0061E6F5 /* JSONParameterEncoder.swift */; };
+		2D89B633227728AA0061E6F5 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B629227728AA0061E6F5 /* HTTPTask.swift */; };
+		2D89B634227728AA0061E6F5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B62A227728AA0061E6F5 /* HTTPMethod.swift */; };
+		2D89B635227728AA0061E6F5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B62B227728AA0061E6F5 /* Router.swift */; };
+		2D89B637227728AA0061E6F5 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B62D227728AA0061E6F5 /* EndPointType.swift */; };
+		2D89B63822772F880061E6F5 /* RedditPostEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B627227728AA0061E6F5 /* RedditPostEndPoint.swift */; };
+		2D89B63922772FB80061E6F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B625227728AA0061E6F5 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		2D89B613227713B50061E6F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D89B616227713B50061E6F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D89B618227713B50061E6F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D89B621227728AA0061E6F5 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		2D89B622227728AA0061E6F5 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
+		2D89B623227728AA0061E6F5 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		2D89B625227728AA0061E6F5 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2D89B627227728AA0061E6F5 /* RedditPostEndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditPostEndPoint.swift; sourceTree = "<group>"; };
+		2D89B629227728AA0061E6F5 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		2D89B62A227728AA0061E6F5 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		2D89B62B227728AA0061E6F5 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		2D89B62D227728AA0061E6F5 /* EndPointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +72,15 @@
 		2D89B60B227713B40061E6F5 /* mdimore */ = {
 			isa = PBXGroup;
 			children = (
+				2D89B61E2277283E0061E6F5 /* Application */,
+				2D89B61F227728AA0061E6F5 /* Networking */,
+			);
+			path = mdimore;
+			sourceTree = "<group>";
+		};
+		2D89B61E2277283E0061E6F5 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				2D89B60C227713B40061E6F5 /* AppDelegate.swift */,
 				2D89B60E227713B40061E6F5 /* ViewController.swift */,
 				2D89B610227713B40061E6F5 /* Main.storyboard */,
@@ -61,7 +88,55 @@
 				2D89B615227713B50061E6F5 /* LaunchScreen.storyboard */,
 				2D89B618227713B50061E6F5 /* Info.plist */,
 			);
-			path = mdimore;
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2D89B61F227728AA0061E6F5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2D89B620227728AA0061E6F5 /* Encoding */,
+				2D89B624227728AA0061E6F5 /* Manager */,
+				2D89B626227728AA0061E6F5 /* EndPoint */,
+				2D89B628227728AA0061E6F5 /* Service */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		2D89B620227728AA0061E6F5 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				2D89B621227728AA0061E6F5 /* ParameterEncoding.swift */,
+				2D89B622227728AA0061E6F5 /* URLParameterEncoding.swift */,
+				2D89B623227728AA0061E6F5 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		2D89B624227728AA0061E6F5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2D89B625227728AA0061E6F5 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2D89B626227728AA0061E6F5 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				2D89B627227728AA0061E6F5 /* RedditPostEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		2D89B628227728AA0061E6F5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2D89B629227728AA0061E6F5 /* HTTPTask.swift */,
+				2D89B62A227728AA0061E6F5 /* HTTPMethod.swift */,
+				2D89B62B227728AA0061E6F5 /* Router.swift */,
+				2D89B62D227728AA0061E6F5 /* EndPointType.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +210,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D89B635227728AA0061E6F5 /* Router.swift in Sources */,
+				2D89B630227728AA0061E6F5 /* JSONParameterEncoder.swift in Sources */,
+				2D89B62F227728AA0061E6F5 /* URLParameterEncoding.swift in Sources */,
+				2D89B633227728AA0061E6F5 /* HTTPTask.swift in Sources */,
+				2D89B63922772FB80061E6F5 /* NetworkManager.swift in Sources */,
+				2D89B63822772F880061E6F5 /* RedditPostEndPoint.swift in Sources */,
+				2D89B634227728AA0061E6F5 /* HTTPMethod.swift in Sources */,
+				2D89B62E227728AA0061E6F5 /* ParameterEncoding.swift in Sources */,
+				2D89B637227728AA0061E6F5 /* EndPointType.swift in Sources */,
 				2D89B60F227713B40061E6F5 /* ViewController.swift in Sources */,
 				2D89B60D227713B40061E6F5 /* AppDelegate.swift in Sources */,
 			);
@@ -284,7 +368,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z56G8V2664;
-				INFOPLIST_FILE = mdimore/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/mdimore/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +376,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mad.mdimore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Z56G8V2664;
-				INFOPLIST_FILE = mdimore/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/mdimore/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +394,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mad.mdimore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
