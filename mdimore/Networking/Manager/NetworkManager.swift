@@ -24,10 +24,11 @@ enum Result<String> {
 
 struct NetworkManager {
     let router = Router<RedditApi>()
-    func getRedditPosts(completion: @escaping (_ posts: [RedditPost]?,_ error: String?)->()) {
-        router.request(.redditTop) { data, response, error in
+    func getRedditPosts(page: String, timeperiod: String, completion: @escaping (_ listingIndex: ListingIndex?, _ posts: [RedditPost]?,_ error: String?)->()) {
+        
+        router.request(.redditTop(page: page, tp: timeperiod)) { data, response, error in
             guard error == nil else {
-                completion(nil, error.debugDescription)
+                completion(nil, nil, error.debugDescription)
                 return
             }
             
@@ -36,22 +37,21 @@ struct NetworkManager {
                 switch result {
                 case .success:
                     guard let responseData = data else {
-                        completion(nil, NetworkResponse.noData.rawValue)
+                        completion(nil, nil, NetworkResponse.noData.rawValue)
                         return
                     }
-                    
                     do {
                         let apiResponse = try JSONDecoder().decode(RootRedditPostJSONData.self, from: responseData)
                         if let topData = apiResponse.data {
                             let posts = topData.children?.map({$0.data})
-                            completion(posts, nil)
+                            completion(topData.index, posts, nil)
                         }
                     } catch {
                         print("NetworkManager, error: \(error)")
-                        completion(nil, NetworkResponse.decodeFailed.rawValue)
+                        completion(nil, nil, NetworkResponse.decodeFailed.rawValue)
                     }
                 case .failure(let networkFailureError):
-                    completion(nil, networkFailureError)
+                    completion(nil, nil, networkFailureError)
                 }
             }
         }

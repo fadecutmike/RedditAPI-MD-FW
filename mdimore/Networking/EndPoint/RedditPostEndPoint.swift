@@ -9,7 +9,7 @@
 import Foundation
 
 public enum RedditApi {
-    case redditTop
+    case redditTop(page:String, tp: String)
 }
 
 extension RedditApi: EndPointType {
@@ -28,8 +28,9 @@ extension RedditApi: EndPointType {
     
     var task: HTTPTask {
         switch self {
-            case .redditTop:
-                return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: [ "count":"50"])
+            case .redditTop(let page, var tp):
+                if tp.count == 0 { tp = "day" }
+                return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: ["after":page, "count":"50", "sr_detail":1, "t":tp])
         }
     }
 }

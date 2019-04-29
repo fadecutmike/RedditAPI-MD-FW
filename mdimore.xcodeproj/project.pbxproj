@@ -24,6 +24,7 @@
 		2D89B64A227756330061E6F5 /* RedditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B649227756330061E6F5 /* RedditViewController.swift */; };
 		2D89B64D227758B20061E6F5 /* RedditPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B64B227758B20061E6F5 /* RedditPostTableViewCell.swift */; };
 		2D89B64E227758B20061E6F5 /* RedditPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D89B64C227758B20061E6F5 /* RedditPostTableViewCell.xib */; };
+		2D89B650227764B90061E6F5 /* SubRedditInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D89B64F227764B90061E6F5 /* SubRedditInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		2D89B649227756330061E6F5 /* RedditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditViewController.swift; sourceTree = "<group>"; };
 		2D89B64B227758B20061E6F5 /* RedditPostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditPostTableViewCell.swift; sourceTree = "<group>"; };
 		2D89B64C227758B20061E6F5 /* RedditPostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RedditPostTableViewCell.xib; sourceTree = "<group>"; };
+		2D89B64F227764B90061E6F5 /* SubRedditInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubRedditInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		2D89B63A227730F00061E6F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2D89B64F227764B90061E6F5 /* SubRedditInfo.swift */,
 				2D89B63C227730F00061E6F5 /* RedditPost.swift */,
 			);
 			path = Model;
@@ -250,6 +253,7 @@
 				2D89B630227728AA0061E6F5 /* JSONParameterEncoder.swift in Sources */,
 				2D89B62F227728AA0061E6F5 /* URLParameterEncoding.swift in Sources */,
 				2D89B633227728AA0061E6F5 /* HTTPTask.swift in Sources */,
+				2D89B650227764B90061E6F5 /* SubRedditInfo.swift in Sources */,
 				2D89B63922772FB80061E6F5 /* NetworkManager.swift in Sources */,
 				2D89B63822772F880061E6F5 /* RedditPostEndPoint.swift in Sources */,
 				2D89B634227728AA0061E6F5 /* HTTPMethod.swift in Sources */,
