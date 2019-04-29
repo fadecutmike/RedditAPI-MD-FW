@@ -16,7 +16,7 @@ struct Listing: Decodable {
     let children: [Child]?
     
     enum CodingKeys: String, CodingKey {
-        case children, before, after
+        case children
     }
     
     init(from decoder: Decoder) throws {
