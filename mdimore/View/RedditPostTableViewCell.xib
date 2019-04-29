@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" rowHeight="180" id="KGk-i7-Jjw" customClass="RedditPostTableViewCell" customModule="rtest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="179.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="xHS-yI-haM" userLabel="thumbnailImage">
+                        <rect key="frame" x="226" y="12" width="80" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="M6F-LC-LHk"/>
+                            <constraint firstAttribute="width" constant="80" id="miG-Uh-mZP"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Reddit post title" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aca-47-Mv1" userLabel="postTitleTextView">
+                        <rect key="frame" x="9" y="35" width="297" height="111.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default-subreddit-icon" translatesAutoresizingMaskIntoConstraints="NO" id="6hi-f5-0gs" userLabel="subredditImageIcon">
+                        <rect key="frame" x="14" y="11" width="18" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="6vD-HK-abw"/>
+                            <constraint firstAttribute="height" constant="18" id="a1K-EZ-4K1"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="r/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWn-Ha-cOE" userLabel="subredditName">
+                        <rect key="frame" x="36" y="11" width="9" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cul-1k-MmL">
+                        <rect key="frame" x="14" y="156.5" width="292" height="18"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdX-VB-0fJ">
+                                <rect key="frame" x="0.0" y="0.0" width="251" height="18"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GzB-KC-1LA" userLabel="commentCount">
+                                        <rect key="frame" x="219" y="0.0" width="32" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12.5"/>
+                                        <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment-icon" translatesAutoresizingMaskIntoConstraints="NO" id="gUG-Fx-arc" userLabel="subredditImageIcon">
+                                        <rect key="frame" x="196" y="0.0" width="18" height="18"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="X7p-fU-ct8"/>
+                                            <constraint firstAttribute="width" constant="18" id="hTy-FL-tHi"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GzB-KC-1LA" firstAttribute="leading" secondItem="gUG-Fx-arc" secondAttribute="trailing" constant="5" id="5Ki-a8-mjw"/>
+                                    <constraint firstAttribute="trailing" secondItem="GzB-KC-1LA" secondAttribute="trailing" id="KRa-k4-ZYL"/>
+                                    <constraint firstItem="GzB-KC-1LA" firstAttribute="top" secondItem="GdX-VB-0fJ" secondAttribute="top" id="Opj-Nd-ZBb"/>
+                                    <constraint firstAttribute="bottom" secondItem="GzB-KC-1LA" secondAttribute="bottom" id="eJW-aH-j0C"/>
+                                    <constraint firstItem="gUG-Fx-arc" firstAttribute="centerY" secondItem="GdX-VB-0fJ" secondAttribute="centerY" id="soh-rG-JGH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Acx-9Q-HjC">
+                                <rect key="frame" x="259" y="2.5" width="1" height="13"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1" id="7gz-fp-VMw"/>
+                                    <constraint firstAttribute="height" constant="13" id="n1L-Ji-SRB"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6T-c5-huo">
+                                <rect key="frame" x="268" y="1.5" width="24" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12.5"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="3Fa-p4-3R0"/>
+                            <constraint firstItem="Acx-9Q-HjC" firstAttribute="centerY" secondItem="cul-1k-MmL" secondAttribute="centerY" id="9oU-lo-tC2"/>
+                        </constraints>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="• 1h" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHy-Bf-2I3" userLabel="postedDate">
+                        <rect key="frame" x="49" y="11" width="23.5" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0Z-Ee-0aZ">
+                        <rect key="frame" x="0.0" y="178.5" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="cNr-BX-KiB"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="6hi-f5-0gs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="15f-XG-06N"/>
+                    <constraint firstItem="oWn-Ha-cOE" firstAttribute="centerY" secondItem="6hi-f5-0gs" secondAttribute="centerY" constant="-1" id="2VJ-BO-A5M"/>
+                    <constraint firstItem="SHy-Bf-2I3" firstAttribute="centerY" secondItem="oWn-Ha-cOE" secondAttribute="centerY" id="2ca-L5-HW4"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xHS-yI-haM" secondAttribute="bottom" priority="750" constant="30" id="4n8-T9-7v7"/>
+                    <constraint firstItem="B0Z-Ee-0aZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6FK-gS-8Hp"/>
+                    <constraint firstAttribute="trailing" secondItem="B0Z-Ee-0aZ" secondAttribute="trailing" id="6Ye-DM-JPl"/>
+                    <constraint firstItem="aca-47-Mv1" firstAttribute="trailing" secondItem="xHS-yI-haM" secondAttribute="trailing" id="8zk-Er-Y6h"/>
+                    <constraint firstItem="aca-47-Mv1" firstAttribute="top" secondItem="6hi-f5-0gs" secondAttribute="bottom" constant="6" id="AcS-tD-wrL"/>
+                    <constraint firstItem="xHS-yI-haM" firstAttribute="top" secondItem="6hi-f5-0gs" secondAttribute="top" constant="1" id="Eti-5Y-jk8"/>
+                    <constraint firstAttribute="bottom" secondItem="cul-1k-MmL" secondAttribute="bottom" constant="5" id="Vqo-m9-Qie"/>
+                    <constraint firstAttribute="bottom" secondItem="B0Z-Ee-0aZ" secondAttribute="bottom" id="Wzg-Wi-sAr"/>
+                    <constraint firstItem="xHS-yI-haM" firstAttribute="trailing" secondItem="cul-1k-MmL" secondAttribute="trailing" id="d7v-sq-loo"/>
+                    <constraint firstItem="cul-1k-MmL" firstAttribute="top" secondItem="aca-47-Mv1" secondAttribute="bottom" constant="10" id="dgj-rM-DO4"/>
+                    <constraint firstItem="cul-1k-MmL" firstAttribute="leading" secondItem="6hi-f5-0gs" secondAttribute="leading" id="eYY-9J-tHd"/>
+                    <constraint firstAttribute="trailing" secondItem="xHS-yI-haM" secondAttribute="trailing" constant="14" id="lCn-kZ-baU"/>
+                    <constraint firstItem="aca-47-Mv1" firstAttribute="leading" secondItem="6hi-f5-0gs" secondAttribute="leading" constant="-5" id="ll4-RV-75B"/>
+                    <constraint firstItem="oWn-Ha-cOE" firstAttribute="leading" secondItem="6hi-f5-0gs" secondAttribute="trailing" constant="4" id="oJ5-WY-lK0"/>
+                    <constraint firstItem="6hi-f5-0gs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="wao-nr-iMD"/>
+                    <constraint firstItem="SHy-Bf-2I3" firstAttribute="leading" secondItem="oWn-Ha-cOE" secondAttribute="trailing" constant="4" id="z9r-1o-ScC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="authorLabel" destination="w6T-c5-huo" id="9MY-Fm-dmz"/>
+                <outlet property="commentCountLabel" destination="GzB-KC-1LA" id="K5z-lG-En3"/>
+                <outlet property="postedDateLabel" destination="SHy-Bf-2I3" id="Xvr-do-yfq"/>
+                <outlet property="separatorLine" destination="B0Z-Ee-0aZ" id="hRm-8F-nd5"/>
+                <outlet property="subredditIconImageView" destination="6hi-f5-0gs" id="EQc-4q-eJ5"/>
+                <outlet property="subredditNameLabel" destination="oWn-Ha-cOE" id="YiF-Si-nZl"/>
+                <outlet property="thumbnailImageView" destination="xHS-yI-haM" id="ohn-Uf-C9n"/>
+                <outlet property="titleTextView" destination="aca-47-Mv1" id="JFV-MT-6fq"/>
+            </connections>
+            <point key="canvasLocation" x="-236.23188405797103" y="60.267857142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="comment-icon" width="18" height="18"/>
+        <image name="default-subreddit-icon" width="85.333335876464844" height="85.333335876464844"/>
+    </resources>
+</document>
